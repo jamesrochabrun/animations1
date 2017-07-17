@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MenuDisplayAnimated" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtL-Az-xoj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select items!!!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74k-Dd-ezB">
+                                        <rect key="frame" x="128" y="20" width="119" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaJ-0l-nEu">
+                                        <rect key="frame" x="327" y="1" width="30" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="actionToggleMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQj-W3-lPi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.35294117650000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="TaJ-0l-nEu" firstAttribute="centerY" secondItem="PtL-Az-xoj" secondAttribute="centerY" id="0X7-yt-BJP"/>
+                                    <constraint firstAttribute="height" constant="60" id="K9a-Q6-ee0"/>
+                                    <constraint firstItem="74k-Dd-ezB" firstAttribute="centerX" secondItem="PtL-Az-xoj" secondAttribute="centerX" id="N1C-Sb-ApL"/>
+                                    <constraint firstItem="74k-Dd-ezB" firstAttribute="centerY" secondItem="PtL-Az-xoj" secondAttribute="centerY" identifier="TitleCenterY" id="SAd-Ye-EdP"/>
+                                    <constraint firstAttribute="trailing" secondItem="TaJ-0l-nEu" secondAttribute="trailing" constant="18" id="h8b-d0-Vgr"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="aOE-BS-AcC">
+                                <rect key="frame" x="108" y="252" width="159" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="3a7-jM-ET8"/>
+                                    <constraint firstAttribute="height" constant="163" id="6UV-xK-aNR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-zr-iWX">
+                                <rect key="frame" x="125" y="594" width="125" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Animate transition">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateWithTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcy-to-wYq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PtL-Az-xoj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="B3h-SO-Msu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HF1-zr-iWX" secondAttribute="bottom" constant="43" id="SCO-nn-aT0"/>
+                            <constraint firstItem="aOE-BS-AcC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UFU-cb-lzF"/>
+                            <constraint firstAttribute="trailing" secondItem="PtL-Az-xoj" secondAttribute="trailing" id="ZjX-4c-VaF"/>
+                            <constraint firstItem="PtL-Az-xoj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aK1-cL-EfX"/>
+                            <constraint firstItem="aOE-BS-AcC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bp3-HQ-kfN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HF1-zr-iWX" secondAttribute="trailing" constant="109" id="sXw-YT-NZQ"/>
+                            <constraint firstItem="HF1-zr-iWX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="109" id="wBk-MT-7j0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ghostImageView" destination="aOE-BS-AcC" id="y4A-7f-tOW"/>
+                        <outlet property="menuHeightConstraint" destination="K9a-Q6-ee0" id="ZdR-X7-A0u"/>
+                        <outlet property="plusButton" destination="TaJ-0l-nEu" id="HRF-n8-dSB"/>
+                        <outlet property="titleLabel" destination="74k-Dd-ezB" id="VrI-cP-34e"/>
+                        <outlet property="trailingSpaceButtonConstraint" destination="h8b-d0-Vgr" id="2eE-QB-qzY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ghost" width="16" height="16"/>
+    </resources>
+</document>
